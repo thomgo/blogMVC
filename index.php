@@ -2,6 +2,7 @@
 include'data/products.php';
 include'data/siteInfo.php';
 include'header.php';
+var_dump($products);
 ?>
         <!-- Add your site or application content here -->
         <main class="container">
@@ -14,7 +15,7 @@ include'header.php';
             ?>
             <div class="col-lg-4 my-3">
               <div class="card">
-                <img class="card-img-top img-fluid" src=<?php echo $product["img_id"]; ?> alt="Card image cap">
+                <img class="card-img-top img-fluid" src=<?php echo $product["path"]. $product["name"]; ?> alt="Card image cap">
                 <div class="card-block">
                   <h4 class="card-title"><?php echo $product["title"]; ?></h4>
                   <p class="card-text"><?php echo $product["catcher"]; ?></p>
