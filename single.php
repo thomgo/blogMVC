@@ -4,12 +4,12 @@ include'header.php';
 
 if(isset($_GET["key"])) {
   $productiId = (int)htmlspecialchars($_GET["key"]);
-  include'data/products.php';
+  include'data/singleproduct.php';
 ?>
 
 <main class="container">
   <h2><?php echo $single_product["title"]; ?></h2>
-  <img class="singleImage" <?php echo "src=" . $products[$_GET["key"]]["img_path"]; ?> />
+  <img class="singleImage" <?php echo "src=" . $single_product["path"] . $single_product["name"]; ?> />
   <p><?php echo $single_product["description"]; ?></p>
 </main>
 
