@@ -1,5 +1,7 @@
 <?php
 
+require_once('dbconnection.php');
+
 $site_information = [
   "main_title" => "Des produits en or",
   "catcher" => "le site ecommerce le plus visité au monde",
