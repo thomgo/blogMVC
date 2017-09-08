@@ -2,7 +2,6 @@
 include'data/products.php';
 include'data/siteInfo.php';
 include'header.php';
-var_dump($products);
 ?>
         <!-- Add your site or application content here -->
         <main class="container">
