@@ -10,15 +10,15 @@ include'header.php';
           <div class="row my-5">
 
             <?php
-              foreach ($products as $key => $product) {
+              foreach ($products as $product) {
             ?>
             <div class="col-lg-4 my-3">
               <div class="card">
-                <img class="card-img-top img-fluid" src=<?php echo $product["img_path"]; ?> alt="Card image cap">
+                <img class="card-img-top img-fluid" src=<?php echo $product["img_id"]; ?> alt="Card image cap">
                 <div class="card-block">
-                  <h4 class="card-title"><?php echo $product["product_title"]; ?></h4>
+                  <h4 class="card-title"><?php echo $product["title"]; ?></h4>
                   <p class="card-text"><?php echo $product["catcher"]; ?></p>
-                  <a href=<?php echo "single.php?key=" . $key; ?> class="btn backgroundDark">See more</a>
+                  <a href=<?php echo "single.php?key=" . $product["id"]; ?> class="btn backgroundDark">See more</a>
                 </div>
               </div>
             </div>
