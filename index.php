@@ -1,7 +1,7 @@
 <?php
 include'data/products.php';
 include'data/siteInfo.php';
-include'header.php';
+include'template/header.php';
 ?>
         <!-- Add your site or application content here -->
         <main class="container">
@@ -29,4 +29,4 @@ include'header.php';
           </div>
         </main>
 
-<?php  include'footer.php'; ?>
+<?php  include'template/footer.php'; ?>

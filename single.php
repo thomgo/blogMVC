@@ -1,6 +1,6 @@
 <?php
 include'data/siteInfo.php';
-include'header.php';
+include'template/header.php';
 
 if(isset($_GET["key"])) {
   $productiId = (int)htmlspecialchars($_GET["key"]);
@@ -19,5 +19,5 @@ else {
   echo "<h2 class='text-center'>oups il y a une erreur, je ne reconnais pas ce produit</h2>";
 }
 
-include'footer.php';
+include'template/footer.php';
 ?>
