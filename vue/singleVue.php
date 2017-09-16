@@ -1,15 +1,12 @@
 <?php
-include'data/siteInfo.php';
 include'template/header.php';
 
 if(isset($_GET["key"])) {
-  $productiId = (int)htmlspecialchars($_GET["key"]);
-  include'data/singleproduct.php';
 ?>
 
 <main class="container">
   <h2><?php echo $single_product["title"]; ?></h2>
-  <img class="singleImage" <?php echo "src=" . $single_product["path"] . $single_product["name"]; ?> />
+  <img class="singleImage" <?php echo "src=../" . $single_product["img_path"] . $single_product["name"]; ?> />
   <p><?php echo $single_product["description"]; ?></p>
 </main>
 

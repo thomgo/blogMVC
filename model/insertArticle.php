@@ -1,12 +1,26 @@
 <?php
 require_once('dbconnection.php');
 
-if(isset($_POST)) {
+if(isset($_POST) || isset($_FILES)) {
+  if($_FILES["articleImage"]["error"]== 0) {
+    $response = $bdd->prepare('INSERT INTO Images(name, extension, img_path, size) VALUES(:name, :extension, :img_path, :size)');
+    $response->execute(array(
+      'name' => $_FILES["articleImage"]["name"] ,
+      'extension' => $_FILES["articleImage"]["type"],
+      'img_path'=> "img/",
+      'size' => $_FILES["articleImage"]["size"]
+    ));
+    move_uploaded_file($_FILES['articleImage']['tmp_name'], '../img/' . $_FILES['articleImage']['name']);
+  }
+  $response = $bdd->prepare('SELECT id FROM Images WHERE id=LAST_INSERT_ID()');
+  $response->execute();
+  $imgId = $response->fetch();
+
   $response = $bdd->prepare('INSERT INTO Articles(title, catcher, img_id, description) VALUES(:title, :catcher, :img_id, :description)');
   $response->execute(array(
     'title' => $_POST['title'] ,
     'catcher' => $_POST['catcher'],
-    'img_id'=> 1,
+    'img_id'=> $imgId["id"],
     'description' => $_POST['description']
   ));
 

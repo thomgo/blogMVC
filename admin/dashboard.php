@@ -10,7 +10,7 @@ if (!isset($_SESSION["userEmail"]) OR !isset($_SESSION["userPassword"])) {
 <main class="container">
   <a href="logout.php">Se déconnecter</a>
 
-  <form class="" action="../data/insertArticle.php" method="post">
+  <form class="" action="../data/insertArticle.php" method="post" enctype="multipart/form-data">
     <div class="form-group">
         <label for="title" class="col-2 col-form-label">Article title</label>
         <input class="form-control" type="text" id="title" name="title">
@@ -22,6 +22,10 @@ if (!isset($_SESSION["userEmail"]) OR !isset($_SESSION["userPassword"])) {
     <div class="form-group">
         <label for="description" class="col-2 col-form-label">Description</label>
         <textarea class="form-control" id="description" name="description"></textarea>
+    </div>
+    <div class="form-group">
+      <label for="articleImage">Your image</label>
+      <input type="file" class="form-control-file" id="articleImage" aria-describedby="load your image" name="articleImage">
     </div>
     <button type="submit" class="btn backgroundDark">Submit</button>
   </form>
