@@ -1,9 +1,12 @@
 <?php
 
-require_once('dbconnection.php');
+require_once('database/dbconnection.php');
 
-$response = $bdd->prepare('SELECT * FROM Site_informations');
-$response->execute();
-$site_information = $response->fetch(PDO::FETCH_ASSOC);
+function getSiteInfo() {
+  $response = getPDO()->prepare('SELECT * FROM Site_informations');
+  $response->execute();
+  return $response->fetch(PDO::FETCH_ASSOC);
+
+}
 
  ?>
