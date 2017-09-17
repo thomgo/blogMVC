@@ -31,8 +31,6 @@ function insertArticle() {
   $response->execute();
   $imgId = $response->fetch();
 
-  var_dump($imgId);
-
   $response = $bd->prepare('INSERT INTO Articles(title, catcher, img_id, description) VALUES(:title, :catcher, :img_id, :description)');
   $response->execute(array(
     'title' => $_POST['title'] ,
