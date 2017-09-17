@@ -1,7 +1,7 @@
 <?php
 
-include'../model/products.php';
-include'../model/siteInfo.php';
+require_once('../model/products.php');
+require_once('../model/siteInfo.php');
 
 $site_information = getSiteInfo();
 $products = getAllArticles();

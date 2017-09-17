@@ -11,8 +11,8 @@
         <!-- Place favicon.ico in the root directory -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
         <link rel="stylesheet" href="css/normalize.css">
-        <link rel="stylesheet" href="css/main.css">
         <link rel="stylesheet" href="../css/main.css">
+        <link rel="stylesheet" href="../../css/main.css">
         <link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Roboto" rel="stylesheet">
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
         <script src="https://use.fontawesome.com/f6b12a6975.js"></script>
@@ -24,7 +24,7 @@
           <h1 class="display-4"><?php echo $site_information["main_title"]; ?></h1>
           <p class="lead"><?php echo $site_information["catcher"]; ?></p>
         </header>
-        <a href="admin/login.php" id="login">
+        <a href="../controleur/admin/login.php" id="login">
           <i class="fa fa-pie-chart fa-2x" aria-hidden="true"></i>
         </a>
       </div>

@@ -1,10 +1,7 @@
-<?php
-include'../data/siteInfo.php';
-include'../template/header.php';
-?>
+<?php include'../../vue/template/header.php'; ?>
 
 <main class="container">
-  <form class="" action="logtreatment.php" method="post">
+  <form class="" action="" method="post">
     <div class="form-group">
         <label for="userEmail" class="col-2 col-form-label">Your email</label>
         <input class="form-control" type="email" id="userEmail" name="userEmail">
@@ -18,6 +15,4 @@ include'../template/header.php';
   </form>
 </main>
 
-<?php
-include'../template/footer.php';
-?>
+<?php include'../../vue/template/footer.php'; ?>

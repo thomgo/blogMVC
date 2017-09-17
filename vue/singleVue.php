@@ -1,7 +1,7 @@
 <?php
 include'template/header.php';
 
-if(isset($_GET["key"])) {
+if(isset($single_product)) {
 ?>
 
 <main class="container">

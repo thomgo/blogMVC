@@ -1,16 +1,10 @@
 <?php
-session_start();
-include'../data/siteInfo.php';
-include'../template/header.php';
-
-if (!isset($_SESSION["userEmail"]) OR !isset($_SESSION["userPassword"])) {
-  header("Location: login.php");
-}
+include'../../vue/template/header.php';
 ?>
 <main class="container">
-  <a href="logout.php">Se déconnecter</a>
+  <a href="dashboard.php?status=logout">Se déconnecter</a>
 
-  <form class="" action="../data/insertArticle.php" method="post" enctype="multipart/form-data">
+  <form class="" action="dashboard.php" method="post" enctype="multipart/form-data">
     <div class="form-group">
         <label for="title" class="col-2 col-form-label">Article title</label>
         <input class="form-control" type="text" id="title" name="title">
@@ -32,5 +26,5 @@ if (!isset($_SESSION["userEmail"]) OR !isset($_SESSION["userPassword"])) {
 </main>
 
 <?php
-include'../template/footer.php';
+include'../../vue/template/footer.php';
 ?>

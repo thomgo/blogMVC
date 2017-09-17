@@ -1,12 +1,12 @@
 <?php
 if(isset($_GET["key"])) {
   $productiId = (int)htmlspecialchars($_GET["key"]);
-  include'../model/products.php';
+  require_once('../model/products.php');
+  $single_product = getSingleArticle($productiId);
 }
-include'../model/siteInfo.php';
+require_once('../model/siteInfo.php');
 
 $site_information = getSiteInfo();
-$single_product = getSingleProduct($productiId);
 
 
 include'../vue/singleVue.php';
