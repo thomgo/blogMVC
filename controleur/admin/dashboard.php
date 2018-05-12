@@ -4,7 +4,7 @@ session_start();
 
 // Require the site information, the articles and the function to treat the login
 require_once'../../model/siteInfo.php';
-require_once '../../model/products.php';
+require_once '../../model/articles.php';
 require_once '../../services/logtreatment.php';
 
 // Function to check if the user is authentificated, otherwise redirection to the login page

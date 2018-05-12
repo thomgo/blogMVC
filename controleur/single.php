@@ -5,10 +5,10 @@
 // if there is a parameter in the url
 if(isset($_GET["key"])) {
   // Clear the parameter
-  $productiId = (int)htmlspecialchars($_GET["key"]);
+  $articleId = (int)htmlspecialchars($_GET["key"]);
   // Get the information of the article with the corresponding id
-  require_once('../model/products.php');
-  $single_product = getSingleArticle($productiId);
+  require_once('../model/articles.php');
+  $single_article = getSingleArticle($articleId);
 }
 
 // get the site information

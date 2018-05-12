@@ -2,14 +2,14 @@
 include'template/header.php';
 
 // If there is an id in the url
-if(isset($single_product)) {
+if(isset($single_article)) {
 ?>
 
 <main class="container">
-  <h2><?php echo $single_product["title"]; ?></h2>
+  <h2><?php echo $single_article["title"]; ?></h2>
   <!-- Show the single article -->
-  <img class="singleImage" <?php echo "src=../" . $single_product["img_path"] . $single_product["name"]; ?> />
-  <p><?php echo $single_product["description"]; ?></p>
+  <img class="singleImage" <?php echo "src=../" . $single_article["img_path"] . $single_article["name"]; ?> />
+  <p><?php echo $single_article["description"]; ?></p>
 </main>
 
 <?php

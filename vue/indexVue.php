@@ -8,15 +8,15 @@ include'template/header.php';
 
             <!-- Loop trough the array of articles and display each one as a card -->
             <?php
-              foreach ($products as $product) {
+              foreach ($articles as $article) {
             ?>
             <div class="col-lg-4 my-3">
               <div class="card">
-                <img class="card-img-top img-fluid" src=<?php echo "../" . $product["img_path"]. $product["name"]; ?> alt="Card image cap">
+                <img class="card-img-top img-fluid" src=<?php echo "../" . $article["img_path"]. $article["name"]; ?> alt="Card image cap">
                 <div class="card-block">
-                  <h4 class="card-title"><?php echo $product["title"]; ?></h4>
-                  <p class="card-text"><?php echo $product["catcher"]; ?></p>
-                  <a href=<?php echo "../controleur/single.php?key=" . $product["a_id"]; ?> class="btn backgroundDark">See more</a>
+                  <h4 class="card-title"><?php echo $article["title"]; ?></h4>
+                  <p class="card-text"><?php echo $article["catcher"]; ?></p>
+                  <a href=<?php echo "../controleur/single.php?key=" . $article["a_id"]; ?> class="btn backgroundDark">See more</a>
                 </div>
               </div>
             </div>
