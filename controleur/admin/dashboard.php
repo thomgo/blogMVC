@@ -10,7 +10,7 @@ require_once '../../services/logtreatment.php';
 // Function to check if the user is authentificated, otherwise redirection to the login page
 checkIfUserIsLogged();
 
-// If the logout form is submitted, log out the user
+// If the user has clicked on the logout link, log out the user
 if (!empty($_GET['status']) AND $_GET['status'] === "logout") {
   logOutUser();
 }

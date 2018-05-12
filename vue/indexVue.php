@@ -1,12 +1,12 @@
 <?php
 include'template/header.php';
 ?>
-        <!-- Add your site or application content here -->
         <main class="container">
           <h2><?php echo $site_information["sub_title"]; ?></h2>
 
           <div class="row my-5">
 
+            <!-- Loop trough the array of articles and display each one as a card -->
             <?php
               foreach ($products as $product) {
             ?>

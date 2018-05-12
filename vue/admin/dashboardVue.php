@@ -2,6 +2,7 @@
 include'../../vue/template/header.php';
 ?>
 <main class="container">
+  <!-- Link to log out the user with parameter in the url -->
   <a href="dashboard.php?status=logout">Se déconnecter</a>
 
   <form class="" action="dashboard.php" method="post" enctype="multipart/form-data">
