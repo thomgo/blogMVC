@@ -3,8 +3,13 @@ include'../../vue/template/header.php';
 ?>
 <main class="container">
   <!-- Link to log out the user with parameter in the url -->
-  <a href="dashboard.php?status=logout">Se déconnecter</a>
-
+  <a class="btn btn-secondary" href="dashboard.php?status=logout">Se déconnecter</a>
+  <?php
+  // If there was an error with form submit we show it
+    if(isset($message)) {
+      echo "<div class='alert alert-danger w-50 my-2' role='alert'>" . $message . "</div>";
+    }
+   ?>
   <form class="" action="dashboard.php" method="post" enctype="multipart/form-data">
     <div class="form-group">
         <label for="title" class="col-2 col-form-label">Article title</label>
