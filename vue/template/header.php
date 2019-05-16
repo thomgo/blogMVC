@@ -15,8 +15,7 @@
         <link rel="stylesheet" href="../../css/main.css">
         <link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Roboto" rel="stylesheet">
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
-        <script src="https://use.fontawesome.com/f6b12a6975.js"></script>
-
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
     </head>
     <body>
       <div class="jumbotron jumbotron-fluid text-center py-4 mb-5 backgroundLight" id="headerJumbo">
@@ -24,7 +23,8 @@
           <h1 class="display-4"><?php echo $site_information["main_title"]; ?></h1>
           <p class="lead"><?php echo $site_information["catcher"]; ?></p>
         </header>
-        <a href="../controleur/admin/login.php" id="login">
-          <i class="fa fa-pie-chart fa-2x" aria-hidden="true"></i>
+        <a class="btn btn-secondary" href="../controleur/admin/login.php" id="login">
+          Espace admin 
+          <i class="fas fa-user-shield"></i>
         </a>
       </div>
