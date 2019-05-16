@@ -11,9 +11,9 @@ function getAllArticles() {
 }
 
 // Select only one article with its image and returns an associative array
-function getSingleArticle($productiId) {
+function getSingleArticle($articleId) {
   $response = getPDO()->prepare('SELECT * FROM Articles a INNER JOIN Images i ON i.id = a.img_id WHERE a.a_id = ?');
-  $response->execute([$productiId]);
+  $response->execute([$articleId]);
   return $response->fetch(PDO::FETCH_ASSOC);
 }
 
