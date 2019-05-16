@@ -1,5 +1,4 @@
 <?php include'../../vue/template/header.php'; ?>
-
 <main class="container">
   <form class="" action="" method="post">
     <div class="form-group">

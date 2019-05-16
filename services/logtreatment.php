@@ -11,8 +11,10 @@ function logUser($userEmail, $userPassword) {
   $user = $response->fetch(PDO::FETCH_ASSOC);
 
   // Check if the query has returned something and if the passwords are the same
+  // We use password_verify to compare passwords because password_hash was used to insert the user in database
+  //current user password = thomasgossart
   // If the credentials are OK starts a session and send the user to the dashboard
-  if($user AND $userPassword === $user["password"]) {
+  if($user AND password_verify($userPassword, $user["password"])) {
     $_SESSION["userEmail"] = $user["mail"];
     $_SESSION["userPassword"] = $user["password"];
     header("Location: dashboard.php");
