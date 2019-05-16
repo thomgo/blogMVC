@@ -11,12 +11,14 @@ include'template/header.php';
               foreach ($articles as $article) {
             ?>
             <div class="col-lg-4 my-3">
-              <div class="card">
-                <img class="card-img-top img-fluid" src=<?php echo "../" . $article["img_path"]. $article["name"]; ?> alt="Card image cap">
+              <div class="card pb-2">
+                <img class="card-img-top img-fluid mb-2" src=<?php echo "../" . $article["img_path"]. $article["name"]; ?> alt="Card image cap">
                 <div class="card-block">
-                  <h4 class="card-title"><?php echo $article["title"]; ?></h4>
-                  <p class="card-text"><?php echo $article["catcher"]; ?></p>
-                  <a href=<?php echo "../controleur/single.php?key=" . $article["a_id"]; ?> class="btn backgroundDark">See more</a>
+                  <h4 class="card-title text-center"><?php echo $article["title"]; ?></h4>
+                  <p class="card-text pl-2"><?php echo $article["catcher"]; ?></p>
+                  <div class="text-center">
+                    <a href=<?php echo "../controleur/single.php?key=" . $article["a_id"]; ?> class="btn backgroundDark">See more</a>
+                  </div>
                 </div>
               </div>
             </div>
