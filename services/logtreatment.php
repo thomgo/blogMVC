@@ -6,22 +6,22 @@ require_once('../../model/database/dbconnection.php');
 // Function to log the user and send him to the dashboard if the credentials are OK
 function logUser($userEmail, $userPassword) {
   // Select the user data from the table based on the userEmail argument
-  $response = getPDO()->prepare("SELECT * FROM Users WHERE mail ='". $userEmail."' ");
-  $response->execute();
+  $response = getPDO()->prepare("SELECT * FROM Users WHERE mail = ?");
+  $response->execute([$userEmail]);
   $user = $response->fetch(PDO::FETCH_ASSOC);
 
   // Check if the query has returned something and if the passwords are the same
   // We use password_verify to compare passwords because password_hash was used to insert the user in database
-  //current user password = thomasgossart
+  // Current user password = thomasgossart
   // If the credentials are OK starts a session and send the user to the dashboard
   if($user AND password_verify($userPassword, $user["password"])) {
     $_SESSION["userEmail"] = $user["mail"];
     $_SESSION["userPassword"] = $user["password"];
     header("Location: dashboard.php");
   }
-  // If it is not OK sends the user to the login page to try again to log
+  // If it is not OK sends the user to the login page with an error message
   else {
-    header("Location: login.php");
+    header("Location: login.php?message=Nous n'avons pas réussi à vous identifier");
   }
 }
 
