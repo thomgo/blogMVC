@@ -3,7 +3,7 @@
 // For now each call to the function returns a new instance, later you'll learn to do better
 function getPDO() {
   try {
-      $bdd = new PDO('mysql:host=localhost;dbname=ecommerce;charset=utf8', 'root', 'ThomAdmin12');
+      $bdd = new PDO('mysql:host=localhost;dbname=blogMVC;charset=utf8', 'root', 'ThomAdmin12');
   }
   catch (Exception $error) {
           die('Erreur : ' . $error->getMessage());
